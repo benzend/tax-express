@@ -1,0 +1,269 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* Utility */
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav #logo {
+  width: 20rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+nav .nav__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+}
+
+nav .nav__links a {
+  text-decoration: none;
+  padding: 1rem;
+  color: black;
+  font-weight: 600;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+nav .nav__links a:hover {
+  background-color: rgba(255, 0, 0, 0.712);
+  color: white;
+}
+
+nav.nav--scrolled {
+  background-color: white;
+}
+
+nav.nav--scrolled #logo {
+  width: 15rem;
+}
+
+header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90vh;
+}
+
+header #cert {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  width: 10%;
+  height: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -2;
+}
+
+header > div {
+  margin: auto;
+}
+
+header h2 {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 0;
+}
+
+header .title__subheader {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+header .description {
+  width: 600px;
+}
+
+header .call-us {
+  color: red;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+header .address {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 0.3rem;
+}
+
+.iframe__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.iframe__container iframe {
+  width: 1000px;
+  height: 700px;
+}
+
+#summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.fb__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem auto;
+  max-width: 1200px;
+}
+
+.fb__container .fb-page {
+  position: relative;
+  left: 20px;
+}
+
+footer {
+  background-color: lightgray;
+  padding: 1.8rem;
+  margin-top: 17rem;
+}
+
+footer .container {
+  max-width: 1300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .container .item {
+  width: 50%;
+}
+
+footer .container .links a {
+  color: black;
+  text-decoration: none;
+  padding: 1px 3px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+footer .container .links a:hover {
+  background-color: rgba(255, 0, 0, 0.61);
+  color: white;
+}
+
+footer .container .social {
+  text-align: right;
+  font-size: 2rem;
+}
+
+footer .container .social a:hover i {
+  -webkit-animation: wink 0.4s ease forwards;
+          animation: wink 0.4s ease forwards;
+}
+
+footer .container .social .fa-twitter-square {
+  color: #55acee;
+}
+
+footer .container .social .fa-facebook-square {
+  color: #3b5998;
+}
+
+@-webkit-keyframes wink {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes wink {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+/*# sourceMappingURL=main.css.map */

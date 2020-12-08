@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* Utility */
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #logo {
+    width: 20rem;
+    transition: all 0.3s ease;
+  }
+  .nav__links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 0.8;
+    a {
+      text-decoration: none;
+      padding: 1rem;
+      color: black;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color: rgba(255, 0, 0, 0.712);
+        color: white;
+      }
+    }
+  }
+  &.nav--scrolled {
+    background-color: white;
+    #logo {
+      width: 15rem;
+    }
+  }
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  #cert {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    width: 10%;
+    height: auto;
+    transform: translateX(-50%);
+    z-index: -2;
+  }
+  > div {
+    margin: auto;
+  }
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 0;
+  }
+  .title__subheader {
+    font-family: "Playfair Display", serif;
+
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  .description {
+    width: 600px;
+  }
+  .call-us {
+    color: red;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .address {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 0.3rem;
+  }
+}
+
+.iframe__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  iframe {
+    width: 1000px;
+    height: 700px;
+  }
+}
+
+#summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.fb__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3rem auto;
+  max-width: 1200px;
+  .fb-page {
+    position: relative;
+    left: 20px;
+  }
+}
+
+footer {
+  background-color: lightgray;
+  padding: 1.8rem;
+  margin-top: 17rem;
+  .container {
+    max-width: 1300px;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    .item {
+      width: 50%;
+    }
+    .links {
+      a {
+        color: black;
+        text-decoration: none;
+        padding: 1px 3px;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: rgba(255, 0, 0, 0.61);
+          color: white;
+        }
+      }
+    }
+    .social {
+      text-align: right;
+      font-size: 2rem;
+      a:hover {
+        i {
+          animation: wink 0.4s ease forwards;
+        }
+      }
+      .fa-twitter-square {
+        color: #55acee;
+      }
+      .fa-facebook-square {
+        color: #3b5998;
+      }
+    }
+  }
+}
+
+@keyframes wink {
+  from {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
