@@ -15,6 +15,10 @@ body {
   margin: auto;
 }
 
+.hamburger__container {
+  display: none;
+}
+
 nav {
   position: -webkit-sticky;
   position: sticky;
@@ -97,7 +101,7 @@ header #cert {
   position: absolute;
   top: 100px;
   left: 50%;
-  width: 10%;
+  width: 180px;
   height: auto;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -121,7 +125,7 @@ header .title__subheader {
 }
 
 header .description {
-  width: 600px;
+  max-width: 600px;
 }
 
 header .call-us {
@@ -264,6 +268,149 @@ footer .container .social .fa-facebook-square {
   to {
     -webkit-transform: rotate(0);
             transform: rotate(0);
+  }
+}
+
+@media (max-width: 1200px) {
+  nav .container {
+    display: block;
+  }
+  nav #logo {
+    width: 15rem;
+  }
+  nav.nav--scrolled {
+    background-color: white;
+  }
+  nav.nav--scrolled #logo {
+    width: 11rem;
+  }
+  nav .nav__links a {
+    text-decoration: none;
+    padding: 1rem;
+    color: black;
+    font-weight: 600;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+  }
+  nav .nav__links a:hover {
+    background-color: rgba(255, 0, 0, 0.712);
+    color: white;
+  }
+}
+
+@media (max-width: 1000px) {
+  #summary {
+    height: 60vh;
+  }
+  #summary img {
+    width: 100vw;
+  }
+  nav {
+    height: 80px;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  nav .nav__links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav .hamburger__container {
+    display: block;
+    position: fixed;
+    width: 50px;
+    height: 30px;
+    right: 30px;
+    top: 24px;
+    cursor: pointer;
+  }
+  nav .hamburger {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  nav .hamburger::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    height: inherit;
+    width: inherit;
+    background-color: inherit;
+  }
+  nav .hamburger::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: inherit;
+    width: inherit;
+    background-color: inherit;
+  }
+  nav .hamburger--active {
+    background-color: white;
+    -webkit-transform: rotate(180deg) translateX(15px);
+            transform: rotate(180deg) translateX(15px);
+  }
+  nav .hamburger--active:after {
+    -webkit-transform: translateY(-10px) rotate(45deg);
+            transform: translateY(-10px) rotate(45deg);
+    background-color: black;
+  }
+  nav .hamburger--active:before {
+    -webkit-transform: translateY(10px) rotate(-45deg);
+            transform: translateY(10px) rotate(-45deg);
+    background-color: black;
+  }
+  header h2 {
+    font-size: 2rem;
+  }
+  header .description {
+    margin: 0 1.8rem;
+    text-align: center;
+  }
+  .fb__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0px auto;
+    height: 70vh;
+    max-width: 1200px;
+  }
+  .fb__container .fb-page {
+    left: 0px;
+  }
+  .fb__container #e-files-cert img {
+    width: 120px;
+  }
+  .fb__container #advice-cert img {
+    width: 180px;
+  }
+  footer {
+    margin-top: 7rem;
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    position: fixed;
+    width: 100%;
+  }
+  header #cert {
+    top: 31px;
   }
 }
 /*# sourceMappingURL=main.css.map */
